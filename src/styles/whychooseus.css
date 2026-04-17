@@ -34,12 +34,15 @@
 }
 
 .why-feature-card {
+  height: 100%;
   padding: var(--space-2xl) var(--space-xl);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-2xl);
   text-align: center;
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
 }
 
 .why-feature-card:hover {

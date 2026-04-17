@@ -65,7 +65,7 @@ export default function Contact() {
                     type="text"
                     id="contact-name"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                     value={form.name}
                     onChange={handleChange}
                     required
@@ -77,7 +77,7 @@ export default function Contact() {
                     type="email"
                     id="contact-email"
                     name="email"
-                    placeholder="john@company.com"
+                    placeholder="your@email.com"
                     value={form.email}
                     onChange={handleChange}
                     required
