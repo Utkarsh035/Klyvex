@@ -1,0 +1,56 @@
+/* ===== Tech Strip ===== */
+.tech-strip {
+  padding: var(--space-2xl) 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--divider);
+}
+
+.tech-strip-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  text-align: center;
+}
+
+.tech-strip-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-lg);
+}
+
+.tech-strip-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+}
+
+.tech-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-tertiary);
+  transition: all var(--transition-base);
+}
+
+.tech-strip-item:hover {
+  color: var(--accent-indigo);
+}
+
+.tech-strip-item-icon {
+  font-size: var(--text-lg);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .tech-strip-logos { gap: var(--space-md); }
+  .tech-strip-item { font-size: var(--text-xs); }
+}

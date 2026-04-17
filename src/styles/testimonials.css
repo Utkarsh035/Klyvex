@@ -1,0 +1,41 @@
+/* ===== CTA / Testimonials ===== */
+.testimonials {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.testimonials-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.cta-card {
+  max-width: 680px;
+  margin: var(--space-3xl) auto 0;
+  padding: var(--space-4xl) var(--space-3xl);
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff, #ede9fe);
+  border-radius: var(--radius-3xl);
+  text-align: center;
+}
+
+.cta-card-emoji {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.cta-card h3 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-family: var(--font-display);
+}
+
+.cta-card p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}

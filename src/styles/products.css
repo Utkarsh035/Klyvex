@@ -1,0 +1,121 @@
+/* ===== Products Section ===== */
+.products {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.products-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.product-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.product-card-image {
+  min-height: 280px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card-image-icon {
+  font-size: 4rem;
+  color: var(--accent-indigo);
+  opacity: 0.3;
+}
+
+.product-badge {
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-lg);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-badge.in-development {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--accent-violet);
+}
+
+.product-badge.live {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--accent-emerald);
+}
+
+.product-badge.beta {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-indigo);
+}
+
+.product-card-body {
+  padding: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-card-body h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.product-card-body p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-lg);
+}
+
+.product-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+  .product-card-image {
+    min-height: 180px;
+  }
+  .product-card-body {
+    padding: var(--space-2xl);
+  }
+}
