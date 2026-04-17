@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <linearGradient id="vynzroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Part (The V) -->
+  <path d="M 20 20 L 45 90 L 70 20 L 55 20 L 45 55 L 35 20 Z" fill="url(#vynzroGrad)" />
+  <path d="M 75 20 L 50 90 L 80 90 L 105 20 Z" fill="#06b6d4" opacity="0.8"/>
+  
+  <!-- Text Part -->
+  <text x="130" y="80" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="64" fill="currentColor" letter-spacing="-2">Vynzro</text>
+</svg>
