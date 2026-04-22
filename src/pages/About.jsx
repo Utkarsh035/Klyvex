@@ -26,7 +26,7 @@ export default function About() {
     >
       <PageHeader 
         label="ABOUT US"
-        title="We are Klyvex"
+        title="We are Vynzro"
         subtitle="A hungry, innovative team dedicated to building the future of digital products and engineering."
       />
       <AboutSection />

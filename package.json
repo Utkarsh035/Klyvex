@@ -1,9 +1,9 @@
 {
-  "name": "klyvex",
+  "name": "vynzro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://utkarsh035.github.io/Klyvex",
+  "homepage": "https://utkarsh035.github.io/Vynzro",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -11,7 +11,7 @@ export const getServices = async () => {
     const response = await api.get(ENDPOINTS.SERVICES_LIST);
     return response.data;
   } catch {
-    console.info('[Klyvex] Using static services data.');
+    console.info('[Vynzro] Using static services data.');
     return staticServices;
   }
 };

@@ -3,6 +3,21 @@
   padding: var(--space-4xl) 0 var(--space-xl);
   background: var(--bg-dark-block);
   color: rgba(255,255,255,0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
 }
 
 .footer-inner {
@@ -73,6 +88,7 @@
   background: #ffffff;
   border-color: transparent;
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
 }
 
 .footer-col h4 {
@@ -163,6 +179,7 @@
 
 .footer-newsletter-btn:hover {
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
 }
 
 /* Bottom */

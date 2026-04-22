@@ -33,14 +33,14 @@ export default function About() {
         <SectionHeader
           label="Who We Are"
           title="A Young Company With Bold Ambitions"
-          subtitle="Founded by a 20-year-old visionary, Klyvex is redefining what a modern IT company looks like."
+          subtitle="Founded by a 20-year-old visionary, Vynzro is redefining what a modern IT company looks like."
         />
 
         <div className="about-grid" style={{ gridTemplateColumns: '1fr', maxWidth: '780px', margin: '3rem auto 0' }}>
           <ScrollReveal>
             <div className="about-text">
               <p>
-                At <span className="about-highlight">Klyvex</span>, we believe age is no barrier to excellence.
+                At <span className="about-highlight">Vynzro</span>, we believe age is no barrier to excellence.
                 Born in 2026 from a passion for technology and a drive to innovate, we bring fresh perspectives
                 to the IT industry combined with relentless execution.
               </p>

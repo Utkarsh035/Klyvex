@@ -1,9 +1,24 @@
-/* ===== Why Choose Us ===== */
 .why-choose-us {
   padding: var(--section-padding);
   background: var(--bg-dark-block);
   position: relative;
   overflow: hidden;
+}
+
+/* Animated gradient orb in dark section */
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  animation: subtle-float 20s ease-in-out infinite;
 }
 
 .why-choose-us .section-header-label {
@@ -48,6 +63,8 @@
 .why-feature-card:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12);
 }
 
 .why-feature-icon {
@@ -66,7 +83,7 @@
 
 .why-feature-card:hover .why-feature-icon {
   transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(124, 58, 237, 0.2));
 }
 
 .why-feature-card h3 {

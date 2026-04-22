@@ -1,37 +1,47 @@
-import { FaReact, FaJava, FaAws, FaDocker, FaPython, FaFigma, FaNodeJs } from 'react-icons/fa6';
-import { SiSpringboot, SiKubernetes, SiFlutter, SiTensorflow, SiNextdotjs } from 'react-icons/si';
-import ScrollReveal from '../ui/ScrollReveal';
+import { FaReact, FaJava, FaFigma, FaBootstrap } from 'react-icons/fa6';
+import {
+  SiSpringboot,
+  SiHibernate,
+  SiMysql,
+  SiTailwindcss,
+  SiKotlin,
+} from 'react-icons/si';
+import { HiOutlinePaintBrush, HiOutlineFilm } from 'react-icons/hi2';
 import '../../styles/techstrip.css';
 
 const techs = [
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Next.js', icon: <SiNextdotjs /> },
+  { name: 'Java', icon: <FaJava /> },
   { name: 'Spring Boot', icon: <SiSpringboot /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'Flutter', icon: <SiFlutter /> },
-  { name: 'AWS', icon: <FaAws /> },
-  { name: 'Docker', icon: <FaDocker /> },
-  { name: 'Kubernetes', icon: <SiKubernetes /> },
-  { name: 'TensorFlow', icon: <SiTensorflow /> },
+  { name: 'Hibernate', icon: <SiHibernate /> },
+  { name: 'JPA', icon: <FaJava /> },
+  { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'React', icon: <FaReact /> },
+  { name: 'Bootstrap', icon: <FaBootstrap /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
   { name: 'Figma', icon: <FaFigma /> },
+  { name: 'Photoshop', icon: <HiOutlinePaintBrush /> },
+  { name: 'Premiere Pro', icon: <HiOutlineFilm /> },
+  { name: 'Kotlin', icon: <SiKotlin /> },
 ];
 
 export default function TechStrip() {
+  // Duplicate the list for seamless infinite scroll
+  const marqueeItems = [...techs, ...techs];
+
   return (
     <section className="tech-strip">
       <div className="tech-strip-inner">
-        <ScrollReveal>
-          <p className="tech-strip-label">Technologies We Work With</p>
-          <div className="tech-strip-logos">
-            {techs.map((tech) => (
-              <div className="tech-strip-item" key={tech.name}>
+        <p className="tech-strip-label">Technologies We Work With</p>
+        <div className="marquee-wrapper">
+          <div className="marquee-track">
+            {marqueeItems.map((tech, i) => (
+              <div className="tech-strip-item" key={`${tech.name}-${i}`}>
                 <span className="tech-strip-item-icon">{tech.icon}</span>
                 {tech.name}
               </div>
             ))}
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

@@ -28,12 +28,13 @@
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: 0 12px 48px rgba(37, 99, 235, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(37, 99, 235, 0.12);
 }
 
 .product-card-image {
   min-height: 280px;
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  background: linear-gradient(135deg, #eef2ff 0%, #dbeafe 50%, #e0e7ff 100%);
   position: relative;
   display: flex;
   align-items: center;

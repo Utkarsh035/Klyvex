@@ -26,8 +26,10 @@
   left: 12%;
   right: 12%;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-indigo), var(--accent-violet));
-  opacity: 0.15;
+  background: linear-gradient(90deg, var(--accent-indigo), var(--accent-violet), var(--accent-indigo));
+  background-size: 200% 100%;
+  opacity: 0.2;
+  animation: shimmer-gradient 6s linear infinite;
 }
 
 .process-step {
@@ -54,7 +56,8 @@
 
 .process-step:hover .process-step-number {
   border-color: var(--accent-indigo);
-  box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.06);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.08), 0 4px 16px rgba(37, 99, 235, 0.12);
+  transform: scale(1.05);
 }
 
 .process-step-number-inner {

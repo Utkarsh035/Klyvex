@@ -11,7 +11,7 @@ export const getProducts = async () => {
     const response = await api.get(ENDPOINTS.PRODUCTS_LIST);
     return response.data;
   } catch {
-    console.info('[Klyvex] Using static products data.');
+    console.info('[Vynzro] Using static products data.');
     return staticProducts;
   }
 };

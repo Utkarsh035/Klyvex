@@ -1,0 +1,115 @@
+/* ===== Legal Pages — Privacy Policy & Terms ===== */
+.legal-page {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.legal-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.legal-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--divider);
+}
+
+.legal-meta span {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.legal-meta span strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.legal-section {
+  margin-bottom: var(--space-3xl);
+}
+
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid rgba(37, 99, 235, 0.1);
+  display: inline-block;
+}
+
+.legal-section p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+}
+
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-md);
+}
+
+.legal-section ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: var(--space-sm);
+}
+
+.legal-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  opacity: 0.5;
+}
+
+.legal-section a {
+  color: var(--accent-indigo);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.legal-section a:hover {
+  opacity: 0.8;
+}
+
+.legal-contact-card {
+  margin-top: var(--space-3xl);
+  padding: var(--space-2xl);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  text-align: center;
+}
+
+.legal-contact-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.legal-contact-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.legal-contact-card a {
+  color: var(--accent-indigo);
+  font-weight: 600;
+}

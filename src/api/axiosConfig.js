@@ -16,7 +16,7 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     // Attach JWT token if available (future auth integration)
-    const token = localStorage.getItem('klyvex_auth_token');
+    const token = localStorage.getItem('vynzro_auth_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -33,14 +33,14 @@ api.interceptors.response.use(
       const { status } = error.response;
       if (status === 401) {
         // Handle unauthorized — clear token, redirect to login
-        localStorage.removeItem('klyvex_auth_token');
-        console.warn('[Klyvex API] Unauthorized — token cleared.');
+        localStorage.removeItem('vynzro_auth_token');
+        console.warn('[Vynzro API] Unauthorized — token cleared.');
       }
       if (status === 500) {
-        console.error('[Klyvex API] Server error:', error.response.data);
+        console.error('[Vynzro API] Server error:', error.response.data);
       }
     } else if (error.request) {
-      console.warn('[Klyvex API] No response — backend may be offline. Using static data.');
+      console.warn('[Vynzro API] No response — backend may be offline. Using static data.');
     }
     return Promise.reject(error);
   }

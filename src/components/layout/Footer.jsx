@@ -14,7 +14,7 @@ export default function Footer() {
   const handleNewsletter = (e) => {
     e.preventDefault();
     // Future: call newsletter API
-    console.info('[Klyvex] Newsletter subscription:', newsletterEmail);
+    console.info('[Vynzro] Newsletter subscription:', newsletterEmail);
     setSubscribed(true);
     setNewsletterEmail('');
     setTimeout(() => setSubscribed(false), 4000);
@@ -106,7 +106,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Klyvex. All rights reserved. Built with ❤ and ambition.</p>
+          <p>© {new Date().getFullYear()} Vynzro. All rights reserved. Built with ❤ and ambition.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

@@ -6,7 +6,6 @@ import {
   HiOutlinePaperAirplane,
 } from 'react-icons/hi2';
 import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa6';
-import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../ui/ScrollReveal';
 import { companyInfo, services } from '../../data/staticData';
 import { submitContactForm } from '../../api/services/contactService';
@@ -37,7 +36,7 @@ export default function Contact() {
       setStatus('success');
       setForm({ name: '', email: '', phone: '', service: '', message: '' });
     } catch (error) {
-      console.error('[Klyvex] Error submitting contact form:', error);
+      console.error('[Vynzro] Error submitting contact form:', error);
       setStatus('error');
     } finally {
       setLoading(false);
@@ -48,12 +47,6 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-inner">
-        <SectionHeader
-          label="Get In Touch"
-          title="Let's Build Something Great"
-          subtitle="Have a project in mind? We'd love to hear about it. Reach out and let's start a conversation."
-        />
-
         <div className="contact-grid">
           {/* Form */}
           <ScrollReveal direction="left">

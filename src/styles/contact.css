@@ -24,6 +24,12 @@
   background: var(--bg-secondary);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-3xl);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-base);
+}
+
+.contact-form:hover {
+  box-shadow: 0 8px 48px rgba(37, 99, 235, 0.06);
 }
 
 .form-row {
@@ -64,7 +70,7 @@
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: var(--accent-indigo);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08), 0 2px 8px rgba(37, 99, 235, 0.06);
 }
 
 .form-group input::placeholder,
@@ -101,8 +107,8 @@
 }
 
 .form-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(79, 70, 229, 0.3);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.35);
 }
 
 .form-submit-btn:disabled {

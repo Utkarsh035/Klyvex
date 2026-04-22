@@ -1,18 +1,18 @@
-/* Static data for Klyvex website — used as fallback when Spring Boot backend is unavailable */
+/* Static data for Vynzro website — used as fallback when Spring Boot backend is unavailable */
 
 export const companyInfo = {
-  name: 'Klyvex',
+  name: 'Vynzro',
   tagline: 'Building Tomorrow\'s Technology, Today',
   description: 'We are a next-generation IT company delivering premium products and services that empower businesses to innovate, scale, and lead in the digital era.',
   founded: 2026,
-  email: 'hello@klyvex.com',
+  email: 'hello@vynzro.com',
   phone: '+91 98XXX XXXXX',
   address: 'India',
   social: {
-    linkedin: 'https://linkedin.com/company/klyvex',
-    twitter: 'https://twitter.com/klyvex',
-    github: 'https://github.com/klyvex',
-    instagram: 'https://instagram.com/klyvex',
+    linkedin: 'https://linkedin.com/company/vynzro',
+    twitter: 'https://twitter.com/vynzro',
+    github: 'https://github.com/vynzro',
+    instagram: 'https://instagram.com/vynzro',
   },
 };
 
@@ -22,35 +22,35 @@ export const services = [
     title: 'Web Development',
     description: 'Custom, high-performance web applications built with modern frameworks. From single-page apps to enterprise solutions.',
     icon: 'HiOutlineGlobeAlt',
-    tags: ['React', 'Next.js', 'Spring Boot', 'Node.js'],
+    tags: ['Java', 'Spring Boot', 'Hibernate', 'React'],
   },
   {
     id: 2,
     title: 'App Development',
     description: 'Native and cross-platform mobile apps that deliver exceptional user experiences across iOS and Android.',
     icon: 'HiOutlineDevicePhoneMobile',
-    tags: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
+    tags: ['React', 'Kotlin', 'JPA', 'MySQL', 'Spring Boot'],
   },
   {
     id: 3,
     title: 'Web Design',
     description: 'Human-centered design that transforms complex problems into intuitive, beautiful digital experiences.',
     icon: 'HiOutlinePaintBrush',
-    tags: ['Figma', 'Prototyping', 'Design Systems', 'UI/UX'],
+    tags: ['Figma', 'Bootstrap', 'Tailwind CSS', 'UI/UX'],
   },
   {
     id: 4,
     title: 'IT Consultation',
     description: 'Strategic technology consulting to align your IT roadmap with business objectives and market trends.',
     icon: 'HiOutlineLightBulb',
-    tags: ['Strategy', 'Architecture', 'Audit', 'Digital Transformation'],
+    tags: ['Java', 'MySQL', 'Spring Boot', 'Hibernate'],
   },
   {
     id: 5,
     title: 'Graphic Design & Video Editing',
     description: 'Available as an add-on option contextually matched to your projects for cohesive branding, engaging marketing materials, and professional media.',
     icon: 'HiOutlineVideoCamera',
-    tags: ['Branding', 'Motion Graphics', 'Post-production'],
+    tags: ['Photoshop', 'Premiere Pro', 'Figma'],
   },
 ];
 
@@ -111,8 +111,8 @@ export const footerLinks = {
     { label: 'IT Consultation', href: '/services' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Service', href: '/terms-of-service' },
     { label: 'Cookie Policy', href: '#' },
   ],
 };

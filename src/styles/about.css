@@ -28,6 +28,10 @@
 .about-highlight {
   color: var(--accent-indigo);
   font-weight: 600;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .about-mission-cards {
@@ -47,8 +51,8 @@
 
 .mission-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
-  border-color: var(--glass-border-hover);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.12);
 }
 
 .mission-card-icon {

@@ -13,9 +13,17 @@
   max-width: 680px;
   margin: var(--space-3xl) auto 0;
   padding: var(--space-4xl) var(--space-3xl);
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff, #ede9fe);
+  background: linear-gradient(135deg, #eef2ff 0%, #dbeafe 40%, #e0e7ff 70%, #ede9fe 100%);
   border-radius: var(--radius-3xl);
   text-align: center;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  box-shadow: 0 8px 48px rgba(37, 99, 235, 0.06);
+  transition: all var(--transition-base);
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 64px rgba(37, 99, 235, 0.12);
 }
 
 .cta-card-emoji {
@@ -39,3 +47,4 @@
   margin-left: auto;
   margin-right: auto;
 }
+

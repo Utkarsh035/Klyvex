@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
     <section className="why-choose-us" id="why-us">
       <div className="why-inner">
         <SectionHeader
-          label="Why Klyvex"
+          label="Why Vynzro"
           title="Why Work With Us"
           subtitle="We're new, hungry, and committed to over-delivering for every single client."
           dark

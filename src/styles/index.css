@@ -1,5 +1,5 @@
 /* ===================================================
-   KLYVEX — Design System & Global Styles
+   VYNZRO — Design System & Global Styles
    Premium Light Theme — Oryvia-inspired professional aesthetic
    =================================================== */
 
@@ -41,7 +41,7 @@
   /* Misc */
   --nav-bg: rgba(255, 255, 255, 0.75);
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 8px 40px rgba(37, 99, 235, 0.08), 0 4px 20px rgba(0, 0, 0, 0.06);
   --input-bg: #f9fafb;
   --input-border: #e5e7eb;
   --divider: #e5e7eb;
@@ -189,44 +189,34 @@ ul {
 
 /* ---------- Keyframes ---------- */
 @keyframes pulse-glow {
-
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
 
 @keyframes scroll-down {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translateY(8px);
-    opacity: 0.3;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-  0%,
-  100% {
-    transform: translateY(0);
-  }
+@keyframes shimmer-gradient {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
 
-  50% {
-    transform: translateY(-10px);
-  }
+@keyframes soft-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes border-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
 }
 
 /* ---------- Responsive ---------- */
@@ -235,3 +225,70 @@ ul {
     --section-padding: 3.5rem 1.25rem;
   }
 }
+/* ---------- Card Grid Background ---------- */
+.why-feature-card,
+.cta-card,
+.service-card,
+.product-card,
+.contact-info-card,
+.mission-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid texture */
+.why-feature-card::before,
+.cta-card::before,
+.service-card::before,
+.product-card::before,
+.contact-info-card::before,
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at top right, black 10%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at top right, black 10%, transparent 80%);
+}
+
+/* Glowing top-border accent on hover */
+.service-card::after,
+.mission-card::after,
+.contact-info-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient-btn);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 2;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+}
+
+.service-card:hover::after,
+.mission-card:hover::after,
+.contact-info-card:hover::after {
+  opacity: 1;
+}
+
+.why-feature-card > *,
+.cta-card > *,
+.service-card > *,
+.product-card > *,
+.contact-info-card > *,
+.mission-card > * {
+  position: relative;
+  z-index: 1;
+}
+

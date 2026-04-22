@@ -28,7 +28,7 @@ export default function Testimonials() {
             <h3>Early Adopter Advantage</h3>
             <p>
               As one of our founding clients, you'll receive dedicated attention, priority support,
-              and competitive pricing. We're invested in making your project a showcase of what Klyvex can do.
+              and competitive pricing. We're invested in making your project a showcase of what Vynzro can do.
             </p>
             <button
               className="hero-btn-primary"

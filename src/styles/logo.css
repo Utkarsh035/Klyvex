@@ -1,33 +1,29 @@
-/* ===== Klyvex Image Logo ===== */
-.klyvex-brand-logo-img {
+/* ===== Vynzro Image Logo ===== */
+.vynzro-brand-logo-img {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   transition: opacity var(--transition-fast);
 }
 
-.klyvex-brand-logo-img:hover {
+.vynzro-brand-logo-img:hover {
   opacity: 0.85;
 }
 
 .logo-img {
-  height: 60px;
-  border-radius: 50%;
+  height: 40px;
   width: auto;
   object-fit: contain;
-  /* This brilliantly hides the white background box around the uploaded image! */
-  mix-blend-mode: multiply;
-  /* Pull it slightly left to counteract the image padding */
-  margin-left: -10px;
+  /* Removed border-radius and mix-blend-mode as we use a transparent SVG */
 }
 
-/* In the dark footer, we don't want multiply blend mode otherwise it goes invisible */
-.klyvex-brand-logo-img.inverse .logo-img {
-  mix-blend-mode: normal;
+/* In the dark footer, no need for special blend overrides on the new SVG */
+.vynzro-brand-logo-img.inverse .logo-img {
+  /* SVG handles transparency nicely */
 }
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 55px; /* Increased from 40px to make logo larger on mobile */
+    height: 46px; /* Increased slightly for mobile */
   }
 }
