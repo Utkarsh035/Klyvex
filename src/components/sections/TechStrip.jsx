@@ -25,13 +25,13 @@ const techs = [
 ];
 
 export default function TechStrip() {
-  // Duplicate the list for seamless infinite scroll
-  const marqueeItems = [...techs, ...techs];
+  // Triple the list for a truly seamless infinite scroll even on wide screens
+  const marqueeItems = [...techs, ...techs, ...techs];
 
   return (
-    <section className="tech-strip">
+    <section className="tech-strip-premium">
       <div className="tech-strip-inner">
-        <p className="tech-strip-label">Technologies We Work With</p>
+        <p className="tech-strip-label">Our Technology Stack</p>
         <div className="marquee-wrapper">
           <div className="marquee-track">
             {marqueeItems.map((tech, i) => (
