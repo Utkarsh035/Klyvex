@@ -30,31 +30,33 @@ export default function Products() {
           {products.map((product, index) => (
             <ScrollReveal key={product.id} delay={index * 0.1}>
               <SpotlightCard className="product-card">
-                <div className="product-card-image">
-                  <span className="product-card-image-icon">
-                    {iconMap[product.icon] || <HiOutlineRocketLaunch />}
-                  </span>
-                  <span className={`product-badge ${product.status}`}>
-                    {statusLabel[product.status]}
-                  </span>
-                </div>
-                <div className="product-card-body">
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
-                  {product.launchDate && (
-                    <p style={{
-                      fontSize: 'var(--text-sm)',
-                      fontWeight: 600,
-                      color: 'var(--accent-indigo)',
-                      marginBottom: 'var(--space-md)',
-                    }}>
-                      🚀 Expected Launch: {product.launchDate}
-                    </p>
-                  )}
-                  <div className="product-tech-stack">
-                    {product.techStack.map((tech) => (
-                      <span className="tech-tag" key={tech}>{tech}</span>
-                    ))}
+                <div className="product-card-inner-layout">
+                  <div className="product-card-image">
+                    <span className="product-card-image-icon">
+                      {iconMap[product.icon] || <HiOutlineRocketLaunch />}
+                    </span>
+                    <span className={`product-badge ${product.status}`}>
+                      {statusLabel[product.status]}
+                    </span>
+                  </div>
+                  <div className="product-card-body">
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
+                    {product.launchDate && (
+                      <p style={{
+                        fontSize: 'var(--text-sm)',
+                        fontWeight: 600,
+                        color: 'var(--accent-indigo)',
+                        marginBottom: 'var(--space-md)',
+                      }}>
+                        🚀 Expected Launch: {product.launchDate}
+                      </p>
+                    )}
+                    <div className="product-tech-stack">
+                      {product.techStack.map((tech) => (
+                        <span className="tech-tag" key={tech}>{tech}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </SpotlightCard>
