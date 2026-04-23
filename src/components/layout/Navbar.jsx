@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { navLinks } from '../../data/staticData';
 import Logo from '../ui/Logo';
+import Magnetic from '../ui/Magnetic';
 import '../../styles/navbar.css';
 
 export default function Navbar() {
@@ -55,9 +56,11 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="navbar-actions">
-          <Link to="/contact" className="navbar-cta">
-            Get Started
-          </Link>
+          <Magnetic>
+            <Link to="/contact" className="navbar-cta">
+              Get Started
+            </Link>
+          </Magnetic>
 
           {/* Mobile hamburger */}
           <button

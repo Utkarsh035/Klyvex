@@ -79,7 +79,7 @@
   border-radius: var(--radius-full);
   border: 1px solid var(--glass-border);
   background: var(--bg-primary);
-  transition: all var(--transition-base);
+  transition: all var(--transition-fast);
   flex-shrink: 0;
   cursor: default;
 }

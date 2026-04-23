@@ -7,6 +7,8 @@ import {
 } from 'react-icons/hi2';
 import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa6';
 import ScrollReveal from '../ui/ScrollReveal';
+import SpotlightCard from '../ui/SpotlightCard';
+import Magnetic from '../ui/Magnetic';
 import { companyInfo, services } from '../../data/staticData';
 import { submitContactForm } from '../../api/services/contactService';
 import '../../styles/contact.css';
@@ -120,14 +122,16 @@ export default function Contact() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="form-submit-btn"
-                disabled={loading}
-                id="contact-submit-btn"
-              >
-                {loading ? 'Sending...' : 'Send Message'} <HiOutlinePaperAirplane />
-              </button>
+              <Magnetic strength={0.2}>
+                <button
+                  type="submit"
+                  className="form-submit-btn"
+                  disabled={loading}
+                  id="contact-submit-btn"
+                >
+                  {loading ? 'Sending...' : 'Send Message'} <HiOutlinePaperAirplane />
+                </button>
+              </Magnetic>
 
               {status === 'success' && (
                 <div className="form-status success">
@@ -145,7 +149,7 @@ export default function Contact() {
           {/* Info sidebar */}
           <ScrollReveal direction="right" delay={0.2}>
             <div className="contact-info">
-              <div className="contact-info-card">
+              <SpotlightCard className="contact-info-card">
                 <div className="contact-info-item">
                   <div className="contact-info-icon"><HiOutlineEnvelope /></div>
                   <div className="contact-info-text">
@@ -169,23 +173,31 @@ export default function Contact() {
                 </div>
 
                 <div className="contact-social">
-                  <a href={companyInfo.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                    <FaLinkedinIn />
-                  </a>
-                  <a href={companyInfo.social.twitter} target="_blank" rel="noreferrer" aria-label="Twitter">
-                    <FaTwitter />
-                  </a>
-                  <a href={companyInfo.social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                    <FaGithub />
-                  </a>
-                  <a href={companyInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                    <FaInstagram />
-                  </a>
+                  <Magnetic>
+                    <a href={companyInfo.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                      <FaLinkedinIn />
+                    </a>
+                  </Magnetic>
+                  <Magnetic>
+                    <a href={companyInfo.social.twitter} target="_blank" rel="noreferrer" aria-label="Twitter">
+                      <FaTwitter />
+                    </a>
+                  </Magnetic>
+                  <Magnetic>
+                    <a href={companyInfo.social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                      <FaGithub />
+                    </a>
+                  </Magnetic>
+                  <Magnetic>
+                    <a href={companyInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
+                      <FaInstagram />
+                    </a>
+                  </Magnetic>
                 </div>
-              </div>
+              </SpotlightCard>
 
               {/* Quick response card */}
-              <div className="contact-info-card" style={{ textAlign: 'center' }}>
+              <SpotlightCard className="contact-info-card" style={{ textAlign: 'center' }}>
                 <div style={{
                   fontSize: 'var(--text-3xl)',
                   marginBottom: 'var(--space-sm)',
@@ -205,7 +217,7 @@ export default function Contact() {
                 }}>
                   We typically respond within 2-4 hours during business hours.
                 </p>
-              </div>
+              </SpotlightCard>
             </div>
           </ScrollReveal>
         </div>

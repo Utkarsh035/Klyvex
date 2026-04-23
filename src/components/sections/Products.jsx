@@ -2,6 +2,7 @@ import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../ui/ScrollReveal';
 import { products } from '../../data/staticData';
+import SpotlightCard from '../ui/SpotlightCard';
 import '../../styles/products.css';
 
 const iconMap = {
@@ -28,7 +29,7 @@ export default function Products() {
         <div className="products-grid">
           {products.map((product, index) => (
             <ScrollReveal key={product.id} delay={index * 0.1}>
-              <div className="product-card">
+              <SpotlightCard className="product-card">
                 <div className="product-card-image">
                   <span className="product-card-image-icon">
                     {iconMap[product.icon] || <HiOutlineRocketLaunch />}
@@ -56,7 +57,7 @@ export default function Products() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>

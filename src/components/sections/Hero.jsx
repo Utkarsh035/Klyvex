@@ -1,14 +1,47 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useSpring, useMotionValue } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HiOutlineArrowRight, HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
+import Magnetic from '../ui/Magnetic';
 import '../../styles/hero.css';
 
 export default function Hero() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 30, stiffness: 100 };
+  const orb1X = useSpring(useMotionValue(0), springConfig);
+  const orb1Y = useSpring(useMotionValue(0), springConfig);
+  const orb2X = useSpring(useMotionValue(0), springConfig);
+  const orb2Y = useSpring(useMotionValue(0), springConfig);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const moveX = (clientX - window.innerWidth / 2) / 25;
+      const moveY = (clientY - window.innerHeight / 2) / 25;
+      
+      orb1X.set(moveX);
+      orb1Y.set(moveY);
+      orb2X.set(-moveX);
+      orb2Y.set(-moveY);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <section className="hero" id="home">
       {/* Blurred background orbs */}
-      <div className="hero-blur-orb-1" />
-      <div className="hero-blur-orb-2" />
+      <motion.div 
+        className="hero-blur-orb-1" 
+        style={{ x: orb1X, y: orb1Y }}
+      />
+      <motion.div 
+        className="hero-blur-orb-2" 
+        style={{ x: orb2X, y: orb2Y }}
+      />
       <div className="hero-blur-orb-3" />
 
       {/* Subtle grid */}
@@ -57,12 +90,16 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <Link to="/services" className="hero-btn-primary" id="hero-explore-btn">
-            Explore Services <HiOutlineArrowRight />
-          </Link>
-          <Link to="/contact" className="hero-btn-secondary" id="hero-contact-btn">
-            <HiOutlineChatBubbleLeftRight /> Contact Us
-          </Link>
+          <Magnetic>
+            <Link to="/services" className="hero-btn-primary" id="hero-explore-btn">
+              Explore Services <HiOutlineArrowRight />
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <Link to="/contact" className="hero-btn-secondary" id="hero-contact-btn">
+              <HiOutlineChatBubbleLeftRight /> Contact Us
+            </Link>
+          </Magnetic>
         </motion.div>
       </motion.div>
 

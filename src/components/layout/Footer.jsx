@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa6'
 import { HiOutlinePaperAirplane } from 'react-icons/hi2';
 import ScrollReveal from '../ui/ScrollReveal';
 import Logo from '../ui/Logo';
+import Magnetic from '../ui/Magnetic';
 import { companyInfo, footerLinks } from '../../data/staticData';
 import '../../styles/footer.css';
 
@@ -39,9 +40,11 @@ export default function Footer() {
                 required
                 id="newsletter-email"
               />
-              <button type="submit" className="footer-newsletter-btn" id="newsletter-submit-btn">
-                {subscribed ? '✓ Subscribed!' : 'Subscribe'}
-              </button>
+              <Magnetic>
+                <button type="submit" className="footer-newsletter-btn" id="newsletter-submit-btn">
+                  {subscribed ? '✓ Subscribed!' : 'Subscribe'}
+                </button>
+              </Magnetic>
             </form>
           </div>
         </ScrollReveal>
@@ -55,18 +58,26 @@ export default function Footer() {
               world-class technology services. Founded with a vision to innovate.
             </p>
             <div className="footer-social">
-              <a href={companyInfo.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <FaLinkedinIn />
-              </a>
-              <a href={companyInfo.social.twitter} target="_blank" rel="noreferrer" aria-label="Twitter">
-                <FaTwitter />
-              </a>
-              <a href={companyInfo.social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                <FaGithub />
-              </a>
-              <a href={companyInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                <FaInstagram />
-              </a>
+              <Magnetic>
+                <a href={companyInfo.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <FaLinkedinIn />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a href={companyInfo.social.twitter} target="_blank" rel="noreferrer" aria-label="Twitter">
+                  <FaTwitter />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a href={companyInfo.social.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <FaGithub />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a href={companyInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <FaInstagram />
+                </a>
+              </Magnetic>
             </div>
           </div>
 

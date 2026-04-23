@@ -6,6 +6,7 @@ import {
 } from 'react-icons/hi2';
 import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../ui/ScrollReveal';
+import SpotlightCard from '../ui/SpotlightCard';
 import { whyChooseUs } from '../../data/staticData';
 import '../../styles/whychooseus.css';
 
@@ -30,13 +31,13 @@ export default function WhyChooseUs() {
         <div className="why-features-grid">
           {whyChooseUs.map((feature, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="why-feature-card">
+              <SpotlightCard className="why-feature-card">
                 <div className="why-feature-icon">
                   {iconMap[feature.icon]}
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>

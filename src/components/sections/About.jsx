@@ -1,6 +1,7 @@
 import { HiOutlineEye, HiOutlineRocketLaunch, HiOutlineHeart, HiOutlineStar } from 'react-icons/hi2';
 import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../ui/ScrollReveal';
+import SpotlightCard from '../ui/SpotlightCard';
 import '../../styles/about.css';
 
 const missionCards = [
@@ -57,11 +58,11 @@ export default function About() {
         <div className="about-mission-cards">
           {missionCards.map((card, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="mission-card">
+              <SpotlightCard className="mission-card">
                 <div className="mission-card-icon">{card.icon}</div>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>

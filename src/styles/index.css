@@ -60,7 +60,7 @@
   --space-4xl: 6rem;
   --space-5xl: 8rem;
 
-  --section-padding: clamp(5rem, 12vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  --section-padding: clamp(6rem, 15vw, 10rem) clamp(1.5rem, 5vw, 4rem);
   --container-max: 1200px;
   --container-wide: 1400px;
 
@@ -90,8 +90,8 @@
   --radius-full: 9999px;
 
   /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
@@ -123,6 +123,13 @@ body {
   color: var(--text-secondary);
   line-height: 1.7;
   overflow-x: hidden;
+  cursor: none; /* Hide default cursor */
+}
+
+@media (max-width: 1024px) {
+  body {
+    cursor: auto;
+  }
 }
 
 h1,
@@ -133,8 +140,13 @@ h5,
 h6 {
   font-family: var(--font-display);
   color: var(--text-primary);
-  line-height: 1.15;
+  line-height: 1.1;
   font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+section {
+  scroll-margin-top: 8rem;
 }
 
 a {
@@ -175,8 +187,8 @@ ul {
 }
 
 ::selection {
-  background: rgba(79, 70, 229, 0.15);
-  color: var(--text-primary);
+  background: var(--accent-indigo);
+  color: #ffffff;
 }
 
 /* ---------- Utilities ---------- */
@@ -275,6 +287,7 @@ ul {
   z-index: 2;
   border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
 }
+
 
 .service-card:hover::after,
 .mission-card:hover::after,

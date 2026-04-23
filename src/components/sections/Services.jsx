@@ -8,6 +8,7 @@ import {
 import SectionHeader from '../ui/SectionHeader';
 import ScrollReveal from '../ui/ScrollReveal';
 import { services } from '../../data/staticData';
+import SpotlightCard from '../ui/SpotlightCard';
 import '../../styles/services.css';
 
 const iconMap = {
@@ -31,7 +32,7 @@ export default function Services() {
         <div className="services-grid">
           {services.map((service, index) => (
             <ScrollReveal key={service.id} delay={index * 0.08}>
-              <div className="service-card">
+              <SpotlightCard className="service-card">
                 <div className="service-icon">
                   {iconMap[service.icon]}
                 </div>
@@ -42,7 +43,7 @@ export default function Services() {
                     <span className="service-tag" key={tag}>{tag}</span>
                   ))}
                 </div>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>

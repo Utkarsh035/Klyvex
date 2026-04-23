@@ -1,0 +1,63 @@
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-indigo);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent-indigo);
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hover State */
+.custom-cursor.hover .cursor-ring {
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-indigo);
+  border-color: var(--accent-indigo);
+  opacity: 0.15;
+}
+
+.custom-cursor.hover .cursor-dot {
+  transform: scale(0.5);
+}
+
+/* Text State */
+.custom-cursor.text .cursor-ring {
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+  border-width: 2px;
+  opacity: 0.5;
+}
+
+.custom-cursor.text .cursor-dot {
+  opacity: 0;
+}
+
+/* Hide cursor on mobile */
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none;
+  }
+}
